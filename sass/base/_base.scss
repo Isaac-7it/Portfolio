@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc((10 / 16) * 100%);
+  scroll-behavior: smooth;
+
+  @include repsonsive(desktop) {
+    font-size: calc((10 / 16) * 100%);
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  padding-bottom: 5.6rem;
+}

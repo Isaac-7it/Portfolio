@@ -1,0 +1,87 @@
+.nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 8rem;
+  margin-bottom: 5.6rem;
+
+  &__logo {
+    height: 5.6rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__menu {
+    flex: 0 1 25%;
+    @include flex(space-between, center, 0);
+  }
+
+  &__search {
+    flex: 1;
+    padding: 0.8rem 3.2rem;
+    border-radius: 2.4rem;
+    border: 0.2rem solid rgba($black-25, 15%);
+    box-shadow: 32px 32px 80px rgba(0, 0, 0, 0.16);
+    font-size: 1.6rem;
+    color: $black-75;
+    @include transistion(0.79, 0.79, 0.15, 0.71);
+
+    &::placeholder {
+      font-size: 1.6rem;
+      color: $black-25;
+    }
+
+    &:focus {
+      outline: 2px solid rgba($color-primary, 75%);
+      outline-offset: 2px;
+    }
+  }
+
+  &__link,
+  &__indicate {
+    &:is(:link, :visited) {
+      font-size: 1.4rem;
+      color: $black;
+    }
+  }
+
+  &__indicate {
+    &:is(:link, :visited) {
+      padding: 0.8rem 1.6rem;
+      border-radius: 2rem;
+      color: $color-white;
+    }
+  }
+
+  &__cta-box {
+    @include flex(center, center, 2.4rem);
+
+    .fa-magnifying-glass {
+      position: absolute;
+      display: inline-block;
+      font-size: 2rem;
+      color: $black-50;
+      right: 0.8rem;
+      top: 50%;
+      transform: translate(-0.8rem, -50%);
+      cursor: pointer;
+    }
+  }
+
+  &__search-box {
+    position: relative;
+  }
+
+  // &__indicate-dot {
+  //   font-size: 3.2rem;
+  //   border-radius: 50%;
+  // }
+
+  &::after {
+    @include peReset(100%, 0.1rem, absolute);
+    inset: 0;
+    top: 100%;
+    background-color: rgba($color-tertiary, 40%);
+  }
+}

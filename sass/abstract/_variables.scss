@@ -1,0 +1,55 @@
+// Fonts
+$Nunito-Sans: "Nunito Sans", sans-serif;
+$Hanken-Grostesk: "Hanken Grotesk", sans-serif;
+
+// Colors
+// Shades
+$black: #2e2b33;
+$black-5: #2d2a320d;
+$black-25: #2d2a3240;
+$black-50: #2d2a3280;
+$black-75: #2d2a32bf;
+$black-100: #2d2a32;
+
+$color-primary: #5e17eb;
+$color-secondary: #ee609c;
+$color-tertiary: #cf6cc9;
+$color-plus: #b8cbb8;
+$color-white: #fff;
+$color-grey: #dddddd;
+$color-glassmorphism: #00000044;
+
+// Brand colors
+$npm: #e40000;
+$css: #254ce5;
+$js: #f6dd1e;
+$git: #f03c2e;
+$github: #010101;
+$sass: #d0629b;
+$html: #e44c25;
+
+$linear-gradient: linear-gradient(
+  135deg,
+  #b8cbb8 0%,
+  #b8cbb8 0%,
+  #ee609c 0%,
+  #ee609c 33%,
+  #cf6cc9 66%,
+  #5e17eb 100%
+);
+
+//Spacings
+$pleftRight: 8rem;
+$mb-4: 4rem;
+$mb-8: 8rem;
+$pb-8: 8rem;
+$m-8: $mb-8;
+$p-8: $pb-8;
+
+$posQuote: -2.2rem;
+
+// Animation
+$blur-4: 4rem;
+$blur-2: 2rem;
+
+$border-radius: 8px;

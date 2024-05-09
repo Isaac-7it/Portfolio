@@ -1,0 +1,81 @@
+.section-testimonials {
+  text-align: center;
+
+  &__main {
+    padding-inline: $pleftRight;
+  }
+
+  &__card {
+    text-align: left;
+    position: relative;
+    background-color: $color-white;
+    @include boxShadow();
+    @include flex(center, end, 3.2rem);
+    border-radius: 0.4rem;
+
+    &:first-of-type {
+      grid-column: 1 / 8;
+    }
+
+    &:last-of-type {
+      grid-column: 4 / -1;
+    }
+
+    .fa-solid {
+      font-size: 7.2rem;
+      position: absolute;
+      color: $color-grey;
+    }
+
+    .fa-quote-right {
+      bottom: $posQuote;
+      right: $posQuote;
+    }
+
+    .fa-quote-left {
+      top: $posQuote;
+      left: $posQuote;
+    }
+  }
+
+  &__img-box {
+    height: 24rem;
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include dropShadow();
+  }
+
+  &__card-details {
+    align-self: center;
+
+    @include flex(center, flex-start, 3.2rem);
+    flex-direction: column;
+  }
+
+  &__text {
+    display: inline-block;
+    max-width: 85%;
+    color: $black-75;
+  }
+
+  &__role,
+  &__card-name {
+    text-transform: uppercase;
+  }
+
+  &__card-name {
+    color: $black;
+    margin-bottom: 0.8rem;
+  }
+
+  &__role {
+    color: $black-50;
+    font-weight: 700;
+  }
+}

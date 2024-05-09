@@ -1,0 +1,91 @@
+// .body-contact {
+//   background-image: linear-gradient(35deg, #fff 0, #000 50%, #000 50%);
+// }
+
+.header-contact {
+  height: 100vh;
+
+  &__main {
+    @include flex(space-between, center, 0);
+    padding-inline: 8rem;
+  }
+
+  &__form {
+    border: 0.2rem solid rgba($color-primary, 75%);
+    text-align: center;
+    padding: 1.6rem;
+    border-radius: $border-radius;
+    flex: 0 1 60%;
+    flex-direction: column;
+    @include flex(center, stretch, 3.2rem);
+    box-shadow: 0 0 2rem $black-25;
+  }
+
+  &__form--heading {
+    text-align: left;
+    display: block;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid $black-25;
+    border-radius: $border-radius;
+    color: $black-50;
+    @include inputShadow();
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__form-box {
+    @include flex(space-between, center, 2.4rem);
+
+    .fa-solid {
+      font-size: 1.8rem;
+      color: rgba($color-primary, 75%);
+    }
+  }
+
+  &__form-input-box {
+    flex: 0 1 50%;
+    padding: 0.8rem;
+    color: $black-50;
+    background-color: $color-white;
+    @include flex(stretch, center, 0.8rem);
+    @include inputShadow();
+    border-radius: $border-radius;
+  }
+
+  &__form-input {
+    flex: 1;
+    padding: 0.8rem 1.6rem;
+    border: 1px solid $black-25;
+    border-radius: $border-radius;
+    color: $black-75;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__form-icon-box {
+    @include flex(center, center, 1.6rem);
+  }
+
+  &__img-box {
+    height: 48rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include dropShadow();
+  }
+}

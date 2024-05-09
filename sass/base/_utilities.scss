@@ -1,0 +1,21 @@
+.link-reset:is(:link, :visited) {
+  font-family: $Hanken-Grostesk;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.h2mb-4 {
+  margin-bottom: 4rem;
+}
+
+.h2-home {
+  @include gradientText();
+}
+
+.section-even {
+  background-color: #d094dd42;
+}
+
+.padTopBottom {
+  padding-block: 5.6rem;
+}

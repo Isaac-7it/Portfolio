@@ -1,0 +1,263 @@
+@keyframes scrollIn {
+  0% {
+    transform: translateY(16rem);
+    filter: blur($blur-4);
+  }
+
+  50% {
+    transform: translateY(8rem);
+    filter: blur($blur-2);
+  }
+
+  100% {
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes scrollTop {
+  0% {
+    bottom: 3.2rem;
+  }
+
+  50% {
+    bottom: 50%;
+  }
+}
+
+@keyframes scrollBottom {
+  0% {
+    top: 12rem;
+  }
+
+  50% {
+    top: 50%;
+  }
+}
+
+@keyframes htmlSlide {
+  0% {
+    top: 4.8;
+    left: 42.5%;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    top: -4.8rem;
+    left: 42.5%;
+    filter: blur(0);
+  }
+}
+
+@keyframes githubSlide {
+  0% {
+    bottom: 4.8;
+    left: 42.5%;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    bottom: -4.8rem;
+    left: 42.5%;
+    filter: blur(0);
+  }
+}
+
+@keyframes figmaSlide {
+  0% {
+    top: 4.8rem;
+    left: 0;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    top: 2.4rem;
+    left: 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes cssSlide {
+  0% {
+    top: 4.8rem;
+    right: 0;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    top: 2.4rem;
+    right: 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes npmSlide {
+  0% {
+    top: 60%;
+    left: -3.2rem;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    top: 50%;
+    left: -3.2rem;
+    filter: blur(0);
+  }
+}
+
+@keyframes jsSlide {
+  0% {
+    top: 60%;
+    right: -3.2rem;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    top: 50%;
+    right: -3.2rem;
+    filter: blur(0);
+  }
+}
+
+@keyframes gitSlide {
+  0% {
+    left: 0;
+    bottom: -3.2rem;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    left: 0;
+    bottom: 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes sassSlide {
+  0% {
+    right: 0;
+    bottom: -3.2rem;
+    filter: blur($blur-4);
+  }
+
+  100% {
+    right: 0;
+    bottom: 0;
+    filter: blur(0);
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur($blur-4);
+  }
+
+  100% {
+    filter: blur(0);
+  }
+}
+
+@keyframes SlideIn--1 {
+  0% {
+    transform: translateX(-50%);
+    filter: blur($blur-4);
+  }
+
+  100% {
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes SlideIn--2 {
+  0% {
+    transform: translateX(50%);
+    filter: blur($blur-4);
+  }
+
+  100% {
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes homeSlide--1 {
+  0% {
+    transform: translateX(-50%);
+    filter: blur($blur-4);
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes homeSlide--2 {
+  0% {
+    transform: translateX(50%);
+    filter: blur($blur-4);
+  }
+
+  100% {
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 120%;
+    background-size: 220%;
+  }
+
+  50% {
+    background-position: 100%;
+    background-size: 160%;
+  }
+
+  100% {
+    background-position: -240%;
+    background-size: 220%;
+  }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes translate-Z {
+  0% {
+    transform: translateZ(-10rem);
+    filter: blur($blur-4);
+  }
+
+  100% {
+    transform: translateZ(0);
+    filter: blur(0);
+  }
+}

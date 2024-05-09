@@ -1,0 +1,159 @@
+.body-project {
+  animation: translate-Z 1.5s linear;
+}
+
+.header-projects {
+  &__main {
+    gap: 3.2rem;
+  }
+
+  &__details-box {
+    width: 100%;
+  }
+
+  &__heading {
+    letter-spacing: 4px;
+    animation: gradientFlow 2s infinite;
+  }
+
+  &__cta-box,
+  &__details-box {
+    flex-direction: column;
+    @include flex(center, center, 0);
+  }
+
+  &__cta-box {
+    gap: 1.6rem;
+  }
+
+  &__details {
+    color: $color-primary;
+    letter-spacing: 2px;
+  }
+
+  &__search-box {
+    @include flex(center, center, 3.2rem);
+    width: 30%;
+    perspective: 100rem;
+    transform-style: preserve-3d;
+
+    .fa-filter {
+      font-size: 2.4rem;
+      color: $color-primary;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    padding: 0.8rem 3.2rem;
+    border-radius: 2.4rem;
+    border: 0.2rem solid rgba($black-25, 15%);
+    box-shadow: 32px 32px 80px rgba(0, 0, 0, 0.16);
+    font-size: 1.6rem;
+    color: $black-75;
+    @include transistion(0.79, 0.79, 0.15, 0.71);
+
+    &::placeholder {
+      font-size: 1.6rem;
+      color: $black-25;
+    }
+
+    &:focus {
+      outline: none;
+      @include boxShadow();
+    }
+  }
+}
+
+.section-projects {
+  padding-inline: $p-8;
+  text-align: center;
+
+  &__main {
+    margin-bottom: $mb-4;
+  }
+
+  &__card {
+    @include flex(space-between, center, 1.6rem);
+
+    &:not(:last-of-type) {
+      margin-bottom: 4rem;
+    }
+
+    // &:hover .section-projects__card-description {
+    //   transform: translateY(0);
+    //   opacity: 1;
+    // }
+  }
+
+  &__card-info {
+    text-align: left;
+  }
+
+  &__card-title {
+    &:is(:link, :visited) {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__card-title,
+  &__card-skills {
+    margin-bottom: 0.8rem;
+  }
+
+  &__card-skills {
+    flex-wrap: wrap;
+    @include flex(space-between, center, 0.8rem);
+
+    span {
+      font-size: 1.5rem;
+      color: $black-50;
+      text-transform: uppercase;
+      border: 2px solid $black-5;
+      padding: 0.4rem 0.8rem;
+      border-radius: 2.4rem;
+    }
+  }
+
+  &__card-description {
+    text-align: left;
+    transform: translateY(100%);
+    opacity: 0;
+    @include transistion(0.79, 0.33, 0, 0.82);
+
+    a {
+      &:is(:link, :visited) {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__card-sub {
+    flex-direction: column;
+    width: max-content;
+    @include flex(stretch, flex-end, 0);
+  }
+
+  &__card-count {
+    color: $color-primary;
+  }
+
+  &__card-img-box {
+    width: 64rem;
+    aspect-ratio: 16 / 9;
+  }
+
+  &__card-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-projects__card-description {
+    animation: scrollText 2s forwards;
+    animation-timeline: view();
+    animation-range: 1vh 45vh;
+  }
+}

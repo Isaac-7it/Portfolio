@@ -1,0 +1,41 @@
+.btn {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 1.6rem 3.2rem;
+  display: inline-block;
+  border-radius: 3.2rem;
+  @include boxShadow();
+  @include transistion(0.79, 0.79, 0.15, 0.71);
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow:
+      1.4px 1.4px 3.6px rgba(0, 0, 0, 0.088),
+      4px 4px 10px rgba(0, 0, 0, 0.106),
+      9.6px 9.6px 24.1px rgba(0, 0, 0, 0.118),
+      32px 32px 80px rgba(0, 0, 0, 0.16);
+    // animation: gradientFlow 2s infinite;
+  }
+
+  &--primary {
+    &:is(:link, :visited) {
+      color: $color-white;
+      background-image: $linear-gradient;
+    }
+  }
+
+  &--secondary {
+    &:is(:link, :visited) {
+      color: $color-primary;
+      border: 0.3rem solid $color-primary;
+    }
+  }
+
+  &--form {
+    color: $color-primary;
+    border: 0.3rem solid $color-primary;
+    width: 100%;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,32 @@
+.footer {
+  position: relative;
+  padding-inline: $p-8;
+  height: 10vh;
+  color: $color-primary;
+  @include flex(space-between, center, 0);
+
+  &__link {
+    font-size: 1.4rem;
+  }
+
+  &__link:is(:link, :visited),
+  &__icon:is(:link, :visited) {
+    color: $color-primary;
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+  }
+
+  &__center,
+  &__right {
+    @include flex(space-between, center, 3.2rem);
+  }
+
+  &::after {
+    @include peReset(100%, 0.1rem, absolute);
+    inset: 0;
+    top: 0%;
+    background-color: rgba($color-tertiary, 40%);
+  }
+}

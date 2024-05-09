@@ -1,0 +1,200 @@
+.header-about {
+  &__main {
+    @include flex(space-between, top, 0);
+    padding-inline: $p-8;
+  }
+
+  &__left {
+    flex: 1;
+    flex-direction: column;
+    @include flex(stretch, flex-start, 4.8rem);
+    animation: homeSlide--1 2s linear forwards;
+  }
+
+  &__text {
+    flex-direction: column;
+    @include flex(stretch, stretch, 3.2rem);
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__intro-box {
+    flex-direction: column;
+    @include flex(stretch, stretch, 0.8rem);
+  }
+
+  &__right {
+    flex: 0 1 50%;
+    @include flex(flex-end, stretch, 0);
+    animation: homeSlide--2 2s linear forwards;
+  }
+
+  &__img {
+    aspect-ratio: 1 / 1;
+    height: 48rem;
+    @include dropShadow();
+    background-size: cover;
+  }
+}
+
+.section-stats {
+  text-align: center;
+  @include flex(space-between, stretch, 2.4rem);
+  padding-bottom: $p-8;
+  padding-inline: $p-8;
+
+  &__rate {
+    display: inline-block;
+    flex-direction: column;
+    @include flex(stretch, stretch, 2.4rem);
+
+    span:first-of-type {
+      @include gradientText();
+    }
+
+    span:last-of-type {
+      color: $color-primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.section-features {
+  text-align: center;
+  padding-inline: $p-8;
+
+  &__heading {
+    color: $color-primary;
+
+    span {
+      @include gradientText();
+    }
+  }
+
+  &__main {
+    @include flex(space-between, center, 0);
+    // padding-inline: 8rem;
+  }
+
+  &__card {
+    text-align: left;
+    @include flex(stretch, stretch, 0.8rem);
+    flex: 0 1 40%;
+    flex-direction: column;
+  }
+
+  &__icon-box {
+    border: 0.1rem solid $black-5;
+    @include flex(center, center, 0);
+    width: max-content;
+    aspect-ratio: 1 / 1;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 2.4rem;
+    box-shadow:
+      2.8px 2.8px 2.2px rgba($black, 0.027),
+      6.7px 6.7px 5.3px rgba($black, 0.034),
+      12.5px 12.5px 10px rgba($black, 0.038),
+      22.3px 22.3px 17.9px rgba($black, 0.041),
+      41.8px 41.8px 33.4px rgba($black, 0.046),
+      100px 100px 80px rgba($black, 0.06);
+  }
+
+  .fa-solid {
+    @include gradientText();
+  }
+
+  &__card-heading {
+    color: $color-primary;
+  }
+
+  &__card-text-box {
+    flex-direction: column;
+    @include flex(stretch, stretch, 1.6rem);
+  }
+
+  //   &__card-text {
+  //     max-width: 40%;
+  //   }
+}
+
+.section-hobbies {
+  text-align: center;
+
+  &__heading {
+    color: $color-primary;
+  }
+
+  &__main {
+    position: relative;
+    height: 45vh;
+  }
+
+  &__img-box {
+    height: 24rem;
+    aspect-ratio: 16 / 9;
+    position: absolute;
+
+    &--1 {
+      left: 8rem;
+      top: 3.2rem;
+      z-index: 1;
+    }
+
+    &--2 {
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    &--3 {
+      right: 8rem;
+      top: 3.2rem;
+      z-index: 1;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include imgShadow();
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .section-stats {
+    &__rate {
+      &:first-of-type {
+        @include statScroll(SlideIn--1);
+      }
+
+      &:last-of-type {
+        @include statScroll(SlideIn--2);
+      }
+    }
+  }
+
+  .section-features {
+    &__card {
+      &:first-of-type {
+        @include statScroll(SlideIn--1);
+      }
+
+      &:last-of-type {
+        @include statScroll(SlideIn--2);
+      }
+    }
+  }
+
+  .section-hobbies {
+    &__img-box {
+      &--1 {
+        animation: floatTop 2s linear forwards;
+        animation-timeline: view();
+      }
+    }
+  }
+}
