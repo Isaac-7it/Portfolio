@@ -33,6 +33,11 @@ p {
   font-size: vwCalc(15, 13.26);
   font-family: $Nunito-Sans;
   font-weight: 500;
+
+  @include repsonsive(phone) {
+    font-size: vwCalc(16.5, 13.26);
+    text-overflow: ellipsis;
+  }
 }
 
 h1,

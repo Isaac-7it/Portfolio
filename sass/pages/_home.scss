@@ -5,6 +5,10 @@
     @include gradientText();
     position: absolute;
 
+    @include repsonsive(phone) {
+      display: none;
+    }
+
     &:first-of-type {
       left: $pleftRight;
       top: vwCalc(32, 13.26);
@@ -231,7 +235,7 @@
 
   .fa-html5 {
     color: $html;
-    top: 0;
+    top: -10%;
     left: 42.5%;
   }
 
@@ -267,66 +271,68 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .bi-grid-3x3-gap {
-    &:first-of-type {
-      animation: scrollBottom 2s linear forwards;
-      animation-timeline: scroll();
+@media only screen and (min-width: 37.5em) {
+  @media (prefers-reduced-motion: no-preference) {
+    .bi-grid-3x3-gap {
+      &:first-of-type {
+        animation: scrollBottom 2s linear forwards;
+        animation-timeline: scroll();
+      }
+
+      &:last-of-type {
+        animation: scrollTop 2s linear forwards;
+        animation-timeline: scroll();
+      }
     }
 
-    &:last-of-type {
-      animation: scrollTop 2s linear forwards;
-      animation-timeline: scroll();
-    }
-  }
-
-  .section-works {
-    &__box {
-      animation: scrollIn 2s linear forwards;
-      animation-timeline: view();
-      animation-range: 1vh 45vh;
-    }
-  }
-
-  .section-tools {
-    .fa-html5 {
-      @include iconAniScroll(htmlSlide);
+    .section-works {
+      &__box {
+        animation: scrollIn 2s linear forwards;
+        animation-timeline: view();
+        animation-range: 1vh 45vh;
+      }
     }
 
-    .fa-figma {
-      @include iconAniScroll(figmaSlide);
+    .section-tools {
+      .fa-html5 {
+        @include iconAniScroll(htmlSlide);
+      }
+
+      .fa-figma {
+        @include iconAniScroll(figmaSlide);
+      }
+
+      .fa-css3-alt {
+        @include iconAniScroll(cssSlide);
+      }
+
+      .fa-npm {
+        @include iconAniScroll(npmSlide);
+      }
+
+      .fa-js {
+        @include iconAniScroll(jsSlide);
+      }
+
+      .fa-git {
+        @include iconAniScroll(gitSlide);
+      }
+
+      .fa-sass {
+        @include iconAniScroll(sassSlide);
+      }
+
+      .fa-github {
+        @include iconAniScroll(githubSlide);
+      }
     }
 
-    .fa-css3-alt {
-      @include iconAniScroll(cssSlide);
-    }
-
-    .fa-npm {
-      @include iconAniScroll(npmSlide);
-    }
-
-    .fa-js {
-      @include iconAniScroll(jsSlide);
-    }
-
-    .fa-git {
-      @include iconAniScroll(gitSlide);
-    }
-
-    .fa-sass {
-      @include iconAniScroll(sassSlide);
-    }
-
-    .fa-github {
-      @include iconAniScroll(githubSlide);
-    }
-  }
-
-  .section-testimonials {
-    &__card {
-      animation: blur 2s linear forwards;
-      animation-timeline: view();
-      animation-range: 1vh 45vh;
+    .section-testimonials {
+      &__card {
+        animation: blur 2s linear forwards;
+        animation-timeline: view();
+        animation-range: 1vh 45vh;
+      }
     }
   }
 }

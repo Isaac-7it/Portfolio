@@ -7,13 +7,17 @@
   padding-bottom: 0;
 
   &__main {
-    @include flex(stretch, center, 0);
+    @include flex(space-between, stretch, 0);
     padding-inline: vwCalc(80, 13.26);
-    width: 100%;
+
+    @include repsonsive(phone) {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__form {
-    flex: 0 1 30%;
+    flex: 1;
     border: vwCalc(2, 13.26) solid rgba($color-primary, 75%);
     text-align: center;
     padding: vwCalc(16, 13.26);
@@ -21,6 +25,11 @@
     flex-direction: column;
     @include flex(center, stretch, vwCalc(32, 13.26));
     box-shadow: 0 0 vwCalc(20, 13.26) $black-25;
+
+    @include repsonsive(phone) {
+      width: max-content;
+      margin: 0 aut;
+    }
   }
 
   &__form--heading {
@@ -46,9 +55,17 @@
   &__form-box {
     @include flex(space-between, center, vwCalc(24, 13.26));
 
+    @include repsonsive(phone) {
+      display: block;
+    }
+
     .fa-solid {
       font-size: vwCalc(18, 13.26);
       color: rgba($color-primary, 75%);
+
+      @include repsonsive(phone) {
+        font-size: vwCalc(24, 13.26);
+      }
     }
   }
 
@@ -69,6 +86,16 @@
     border-radius: $border-radius;
     color: $black-75;
 
+    @include repsonsive(phone) {
+      display: block;
+    }
+
+    &::placeholder {
+      @include repsonsive(phone) {
+        font-size: vwCalc(32, 13.26);
+      }
+    }
+
     &:focus {
       outline: none;
     }
@@ -79,8 +106,13 @@
   }
 
   &__img-box {
-    height: vwCalc(480, 13.26);
+    // height: vwCalc(480, 13.26);
+    flex: 1;
     aspect-ratio: 1 / 1;
+
+    @include repsonsive(phone) {
+      display: none;
+    }
   }
 
   &__img {
