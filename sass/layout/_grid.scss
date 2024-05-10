@@ -1,18 +1,18 @@
 .grid {
-	&__1x3 {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(max-content, 1fr));
-	}
+  &__1x3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  }
 
-	&__3x1 {
-		display: grid;
-		grid-template-rows: repeat(3, auto);
-	}
+  &__3x1 {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+  }
 
-	&__2x10 {
-		display: grid;
-		grid-template-columns: repeat(10, 1fr);
-		grid-template-rows: repeat(2, 20rem);
-		gap: 4rem;
-	}
+  &__2x10 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, vwCalc(200, 13.26));
+    gap: vwCalc(40, 13.26);
+  }
 }

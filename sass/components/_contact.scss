@@ -1,17 +1,17 @@
 .section-contact {
   padding-inline: $p-8;
-  @include flex(space-between, center, 4rem);
+  @include flex(space-between, center, vwCalc(40, 13.26));
 
   &__text-box {
     margin-bottom: $mb-4;
   }
 
   &__heading {
-    margin-bottom: 1.6rem;
+    margin-bottom: vwCalc(16, 13.26);
   }
 
   &__right {
-    height: 16.8rem;
+    height: vwCalc(168, 13.26);
     aspect-ratio: 1 / 1;
   }
 

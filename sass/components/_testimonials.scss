@@ -10,8 +10,8 @@
     position: relative;
     background-color: $color-white;
     @include boxShadow();
-    @include flex(center, end, 3.2rem);
-    border-radius: 0.4rem;
+    @include flex(center, end, vwCalc(32, 13.26));
+    border-radius: vwCalc(4, 13.26);
 
     &:first-of-type {
       grid-column: 1 / 8;
@@ -22,7 +22,7 @@
     }
 
     .fa-solid {
-      font-size: 7.2rem;
+      font-size: vwCalc(72, 13.26);
       position: absolute;
       color: $color-grey;
     }
@@ -39,7 +39,7 @@
   }
 
   &__img-box {
-    height: 24rem;
+    height: vwCalc(240, 13.26);
     aspect-ratio: 1 / 1;
     display: inline-block;
   }
@@ -54,7 +54,7 @@
   &__card-details {
     align-self: center;
 
-    @include flex(center, flex-start, 3.2rem);
+    @include flex(center, flex-start, vwCalc(32, 13.26));
     flex-direction: column;
   }
 
@@ -71,7 +71,7 @@
 
   &__card-name {
     color: $black;
-    margin-bottom: 0.8rem;
+    margin-bottom: vwCalc(8, 13.26);
   }
 
   &__role {

@@ -5,7 +5,7 @@
 }
 
 .h2mb-4 {
-  margin-bottom: 4rem;
+  margin-bottom: vwCalc(40, 13.26);
 }
 
 .h2-home {
@@ -13,9 +13,9 @@
 }
 
 .section-even {
-  background-color: #d094dd42;
+  background-color: #ddd0fa;
 }
 
 .padTopBottom {
-  padding-block: 5.6rem;
+  padding-block: vwCalc(56, 13.26);
 }

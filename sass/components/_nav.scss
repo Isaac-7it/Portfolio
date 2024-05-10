@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 8rem;
-  margin-bottom: 5.6rem;
+  padding: vwCalc(8, 13.26) $pleftRight;
+  margin-bottom: vwCalc(56, 13.26);
 
   &__logo {
-    height: 5.6rem;
+    height: vwCalc(56, 13.26);
     aspect-ratio: 1 / 1;
   }
 
@@ -19,16 +19,16 @@
 
   &__search {
     flex: 1;
-    padding: 0.8rem 3.2rem;
-    border-radius: 2.4rem;
-    border: 0.2rem solid rgba($black-25, 15%);
+    padding: vwCalc(8, 13.26) vwCalc(32, 13.26);
+    border-radius: vwCalc(24, 13.26);
+    border: vwCalc(2, 13.26) solid rgba($black-25, 15%);
     box-shadow: 32px 32px 80px rgba(0, 0, 0, 0.16);
-    font-size: 1.6rem;
+    font-size: vwCalc(16, 13.26);
     color: $black-75;
     @include transistion(0.79, 0.79, 0.15, 0.71);
 
     &::placeholder {
-      font-size: 1.6rem;
+      font-size: vwCalc(16, 13.26);
       color: $black-25;
     }
 
@@ -41,30 +41,30 @@
   &__link,
   &__indicate {
     &:is(:link, :visited) {
-      font-size: 1.4rem;
+      font-size: vwCalc(14, 13.26);
       color: $black;
     }
   }
 
   &__indicate {
     &:is(:link, :visited) {
-      padding: 0.8rem 1.6rem;
-      border-radius: 2rem;
+      padding: vwCalc(8, 13.26) vwCalc(16, 13.26);
+      border-radius: vwCalc(20, 13.26);
       color: $color-white;
     }
   }
 
   &__cta-box {
-    @include flex(center, center, 2.4rem);
+    @include flex(center, center, vwCalc(24, 13.26));
 
     .fa-magnifying-glass {
       position: absolute;
       display: inline-block;
-      font-size: 2rem;
+      font-size: vwCalc(20, 13.26);
       color: $black-50;
-      right: 0.8rem;
+      right: vwCalc(8, 13.26);
       top: 50%;
-      transform: translate(-0.8rem, -50%);
+      transform: translate(vwCalc(-8, 13.26), -50%);
       cursor: pointer;
     }
   }

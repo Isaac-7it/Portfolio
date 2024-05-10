@@ -4,21 +4,23 @@
 
 .header-contact {
   height: 100vh;
+  padding-bottom: 0;
 
   &__main {
-    @include flex(space-between, center, 0);
-    padding-inline: 8rem;
+    @include flex(stretch, center, 0);
+    padding-inline: vwCalc(80, 13.26);
+    width: 100%;
   }
 
   &__form {
-    border: 0.2rem solid rgba($color-primary, 75%);
+    flex: 0 1 30%;
+    border: vwCalc(2, 13.26) solid rgba($color-primary, 75%);
     text-align: center;
-    padding: 1.6rem;
+    padding: vwCalc(16, 13.26);
     border-radius: $border-radius;
-    flex: 0 1 60%;
     flex-direction: column;
-    @include flex(center, stretch, 3.2rem);
-    box-shadow: 0 0 2rem $black-25;
+    @include flex(center, stretch, vwCalc(32, 13.26));
+    box-shadow: 0 0 vwCalc(20, 13.26) $black-25;
   }
 
   &__form--heading {
@@ -30,7 +32,7 @@
     resize: none;
     width: 100%;
     text-align: left;
-    padding: 1rem;
+    padding: vwCalc(10, 13.26);
     border: 1px solid $black-25;
     border-radius: $border-radius;
     color: $black-50;
@@ -42,27 +44,27 @@
   }
 
   &__form-box {
-    @include flex(space-between, center, 2.4rem);
+    @include flex(space-between, center, vwCalc(24, 13.26));
 
     .fa-solid {
-      font-size: 1.8rem;
+      font-size: vwCalc(18, 13.26);
       color: rgba($color-primary, 75%);
     }
   }
 
   &__form-input-box {
     flex: 0 1 50%;
-    padding: 0.8rem;
+    padding: vwCalc(8, 13.26);
     color: $black-50;
     background-color: $color-white;
-    @include flex(stretch, center, 0.8rem);
+    @include flex(stretch, center, vwCalc(8, 13.26));
     @include inputShadow();
     border-radius: $border-radius;
   }
 
   &__form-input {
     flex: 1;
-    padding: 0.8rem 1.6rem;
+    padding: vwCalc(8, 13.26) vwCalc(16, 13.26);
     border: 1px solid $black-25;
     border-radius: $border-radius;
     color: $black-75;
@@ -73,11 +75,11 @@
   }
 
   &__form-icon-box {
-    @include flex(center, center, 1.6rem);
+    @include flex(center, center, vwCalc(16, 13.26));
   }
 
   &__img-box {
-    height: 48rem;
+    height: vwCalc(480, 13.26);
     aspect-ratio: 1 / 1;
   }
 

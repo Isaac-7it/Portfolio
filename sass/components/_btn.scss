@@ -1,10 +1,10 @@
 .btn {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: vwCalc(18, 13.26);
   font-weight: 400;
-  padding: 1.6rem 3.2rem;
+  padding: vwCalc(16, 13.26) vwCalc(32, 13.26);
   display: inline-block;
-  border-radius: 3.2rem;
+  border-radius: vwCalc(32, 13.26);
   @include boxShadow();
   @include transistion(0.79, 0.79, 0.15, 0.71);
 
@@ -28,13 +28,13 @@
   &--secondary {
     &:is(:link, :visited) {
       color: $color-primary;
-      border: 0.3rem solid $color-primary;
+      border: vwCalc(3, 13.26) solid $color-primary;
     }
   }
 
   &--form {
     color: $color-primary;
-    border: 0.3rem solid $color-primary;
+    border: vwCalc(3, 13.26) solid $color-primary;
     width: 100%;
     cursor: pointer;
   }

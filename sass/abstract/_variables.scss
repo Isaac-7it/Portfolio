@@ -39,17 +39,22 @@ $linear-gradient: linear-gradient(
 );
 
 //Spacings
-$pleftRight: 8rem;
-$mb-4: 4rem;
-$mb-8: 8rem;
-$pb-8: 8rem;
+//1vw = 13.36
+
+$pleftRight: vwCalc(80, 13.26);
+$mb-4: vwCalc(40, 13.26);
+$p-4: $mb-4;
+$mb-8: vwCalc(80, 13.26);
+$pb-8: vwCalc(80, 13.26);
 $m-8: $mb-8;
 $p-8: $pb-8;
 
-$posQuote: -2.2rem;
+$posQuote: vwCalc(-22, 13.26);
 
 // Animation
 $blur-4: 4rem;
 $blur-2: 2rem;
 
 $border-radius: 8px;
+
+$imgposleftRight: vwCalc(24, 13.26);

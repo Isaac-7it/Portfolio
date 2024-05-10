@@ -5,32 +5,32 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: vwCalc(80, 13.26);
 }
 
 h2 {
-  font-size: 5.5rem;
+  font-size: vwCalc(55, 13.26);
   font-weight: 500;
 }
 
 h3 {
-  font-size: 5rem;
+  font-size: vwCalc(50, 13.26);
 }
 
 h4 {
-  font-size: 3rem;
+  font-size: vwCalc(30, 13.26);
 }
 
 h5 {
-  font-size: 2rem;
+  font-size: vwCalc(20, 13.26);
 }
 
 h6 {
-  font-size: 2rem;
+  font-size: vwCalc(20, 13.26);
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: vwCalc(15, 13.26);
   font-family: $Nunito-Sans;
   font-weight: 500;
 }

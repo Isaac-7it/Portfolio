@@ -4,7 +4,7 @@
 
 .header-projects {
   &__main {
-    gap: 3.2rem;
+    gap: vwCalc(32, 13.26);
   }
 
   &__details-box {
@@ -12,7 +12,6 @@
   }
 
   &__heading {
-    letter-spacing: 4px;
     animation: gradientFlow 2s infinite;
   }
 
@@ -23,7 +22,7 @@
   }
 
   &__cta-box {
-    gap: 1.6rem;
+    gap: vwCalc(16, 13.26);
   }
 
   &__details {
@@ -32,29 +31,29 @@
   }
 
   &__search-box {
-    @include flex(center, center, 3.2rem);
+    @include flex(center, center, vwCalc(32, 13.26));
     width: 30%;
-    perspective: 100rem;
+    perspective: vwCalc(1000, 13.26);
     transform-style: preserve-3d;
 
     .fa-filter {
-      font-size: 2.4rem;
+      font-size: vwCalc(24, 13.26);
       color: $color-primary;
     }
   }
 
   &__search {
     flex: 1;
-    padding: 0.8rem 3.2rem;
-    border-radius: 2.4rem;
-    border: 0.2rem solid rgba($black-25, 15%);
+    padding: vwCalc(8, 13.26) vwCalc(32, 13.26);
+    border-radius: vwCalc(24, 13.26);
+    border: vwCalc(2, 13.26) solid rgba($black-25, 15%);
     box-shadow: 32px 32px 80px rgba(0, 0, 0, 0.16);
-    font-size: 1.6rem;
+    font-size: vwCalc(16, 13.26);
     color: $black-75;
     @include transistion(0.79, 0.79, 0.15, 0.71);
 
     &::placeholder {
-      font-size: 1.6rem;
+      font-size: vwCalc(16, 13.26);
       color: $black-25;
     }
 
@@ -74,10 +73,10 @@
   }
 
   &__card {
-    @include flex(space-between, center, 1.6rem);
+    @include flex(space-between, center, vwCalc(16, 13.26));
 
     &:not(:last-of-type) {
-      margin-bottom: 4rem;
+      margin-bottom: vwCalc(40, 13.26);
     }
 
     // &:hover .section-projects__card-description {
@@ -92,27 +91,27 @@
 
   &__card-title {
     &:is(:link, :visited) {
-      font-size: 2.4rem;
+      font-size: vwCalc(24, 13.26);
       text-transform: uppercase;
     }
   }
 
   &__card-title,
   &__card-skills {
-    margin-bottom: 0.8rem;
+    margin-bottom: vwCalc(8, 13.26);
   }
 
   &__card-skills {
     flex-wrap: wrap;
-    @include flex(space-between, center, 0.8rem);
+    @include flex(space-between, center, vwCalc(8, 13.26));
 
     span {
-      font-size: 1.5rem;
+      font-size: vwCalc(15, 13.26);
       color: $black-50;
       text-transform: uppercase;
       border: 2px solid $black-5;
-      padding: 0.4rem 0.8rem;
-      border-radius: 2.4rem;
+      padding: vwCalc(4, 13.26) vwCalc(8, 13.26);
+      border-radius: vwCalc(24, 13.26);
     }
   }
 
@@ -140,7 +139,7 @@
   }
 
   &__card-img-box {
-    width: 64rem;
+    width: vwCalc(640, 13.26);
     aspect-ratio: 16 / 9;
   }
 

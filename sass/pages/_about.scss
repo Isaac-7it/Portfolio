@@ -7,13 +7,13 @@
   &__left {
     flex: 1;
     flex-direction: column;
-    @include flex(stretch, flex-start, 4.8rem);
+    @include flex(stretch, flex-start, vwCalc(48, 13.26));
     animation: homeSlide--1 2s linear forwards;
   }
 
   &__text {
     flex-direction: column;
-    @include flex(stretch, stretch, 3.2rem);
+    @include flex(stretch, stretch, vwCalc(32, 13.26));
     span {
       display: inline-block;
     }
@@ -21,7 +21,7 @@
 
   &__intro-box {
     flex-direction: column;
-    @include flex(stretch, stretch, 0.8rem);
+    @include flex(stretch, stretch, vwCalc(8, 13.26));
   }
 
   &__right {
@@ -32,7 +32,7 @@
 
   &__img {
     aspect-ratio: 1 / 1;
-    height: 48rem;
+    height: vwCalc(480, 13.26);
     @include dropShadow();
     background-size: cover;
   }
@@ -40,14 +40,14 @@
 
 .section-stats {
   text-align: center;
-  @include flex(space-between, stretch, 2.4rem);
+  @include flex(space-between, stretch, vwCalc(24, 13.26));
   padding-bottom: $p-8;
   padding-inline: $p-8;
 
   &__rate {
     display: inline-block;
     flex-direction: column;
-    @include flex(stretch, stretch, 2.4rem);
+    @include flex(stretch, stretch, vwCalc(24, 13.26));
 
     span:first-of-type {
       @include gradientText();
@@ -55,7 +55,7 @@
 
     span:last-of-type {
       color: $color-primary;
-      font-size: 2rem;
+      font-size: vwCalc(20, 13.26);
       text-transform: uppercase;
     }
   }
@@ -80,19 +80,19 @@
 
   &__card {
     text-align: left;
-    @include flex(stretch, stretch, 0.8rem);
+    @include flex(stretch, stretch, vwCalc(8, 13.26));
     flex: 0 1 40%;
     flex-direction: column;
   }
 
   &__icon-box {
-    border: 0.1rem solid $black-5;
+    border: vwCalc(1, 13.26) solid $black-5;
     @include flex(center, center, 0);
     width: max-content;
     aspect-ratio: 1 / 1;
-    padding: 0.8rem;
-    border-radius: 0.8rem;
-    font-size: 2.4rem;
+    padding: vwCalc(8, 13.26);
+    border-radius: vwCalc(8, 13.26);
+    font-size: vwCalc(24, 13.26);
     box-shadow:
       2.8px 2.8px 2.2px rgba($black, 0.027),
       6.7px 6.7px 5.3px rgba($black, 0.034),
@@ -112,7 +112,7 @@
 
   &__card-text-box {
     flex-direction: column;
-    @include flex(stretch, stretch, 1.6rem);
+    @include flex(stretch, stretch, vwCalc(16, 13.26));
   }
 
   //   &__card-text {
@@ -129,17 +129,17 @@
 
   &__main {
     position: relative;
-    height: 45vh;
+    height: 21vw;
   }
 
   &__img-box {
-    height: 24rem;
+    height: vwCalc(240, 13.26);
     aspect-ratio: 16 / 9;
     position: absolute;
 
     &--1 {
-      left: 8rem;
-      top: 3.2rem;
+      left: vwCalc(80, 13.26);
+      top: vwCalc(32, 13.26);
       z-index: 1;
     }
 
@@ -150,8 +150,8 @@
     }
 
     &--3 {
-      right: 8rem;
-      top: 3.2rem;
+      right: vwCalc(80, 13.26);
+      top: vwCalc(32, 13.26);
       z-index: 1;
     }
   }
@@ -189,12 +189,12 @@
     }
   }
 
-  .section-hobbies {
-    &__img-box {
-      &--1 {
-        animation: floatTop 2s linear forwards;
-        animation-timeline: view();
-      }
-    }
-  }
+  // .section-hobbies {
+  //   &__img-box {
+  //     &--1 {
+  //       animation: floatTop 2s linear forwards;
+  //       animation-timeline: view();
+  //     }
+  //   }
+  // }
 }

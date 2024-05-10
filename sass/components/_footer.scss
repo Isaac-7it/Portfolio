@@ -1,12 +1,11 @@
 .footer {
   position: relative;
-  padding-inline: $p-8;
-  height: 10vh;
+  padding: $p-4 $p-8;
   color: $color-primary;
   @include flex(space-between, center, 0);
 
   &__link {
-    font-size: 1.4rem;
+    font-size: vwCalc(14, 13.26);
   }
 
   &__link:is(:link, :visited),
@@ -15,16 +14,16 @@
   }
 
   &__icon {
-    font-size: 1.6rem;
+    font-size: vwCalc(16, 13.26);
   }
 
   &__center,
   &__right {
-    @include flex(space-between, center, 3.2rem);
+    @include flex(space-between, center, vwCalc(32, 13.26));
   }
 
   &::after {
-    @include peReset(100%, 0.1rem, absolute);
+    @include peReset(100%, vwCalc(1, 13.26), absolute);
     inset: 0;
     top: 0%;
     background-color: rgba($color-tertiary, 40%);
