@@ -28,7 +28,7 @@
 
     @include repsonsive(phone) {
       width: max-content;
-      margin: 0 aut;
+      margin: 0 auto;
     }
   }
 
@@ -46,6 +46,12 @@
     border-radius: $border-radius;
     color: $black-50;
     @include inputShadow();
+
+    &::placeholder {
+      @include repsonsive(phone) {
+        font-size: vwCalc(32, 13.26);
+      }
+    }
 
     &:focus {
       outline: none;
