@@ -35,7 +35,7 @@ p {
   font-weight: 500;
 
   @include repsonsive(phone) {
-    font-size: vwCalc(16.5, 13.26);
+    font-size: vwCalc(16, 13.26);
     text-overflow: ellipsis;
   }
 }
