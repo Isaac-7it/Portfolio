@@ -14,5 +14,9 @@
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(2, vwCalc(200, 13.26));
     gap: vwCalc(40, 13.26);
+
+    @include repsonsive(phone) {
+      grid-template-rows: repeat(2, max-content);
+    }
   }
 }

@@ -250,26 +250,62 @@ body {
 h1 {
   font-size: 6.0331825038vw;
 }
+@media only screen and (max-width: 37.5em) {
+  h1 {
+    font-size: 6.4102564103vw;
+    text-overflow: ellipsis;
+  }
+}
 
 h2 {
   font-size: 4.1478129713vw;
   font-weight: 500;
 }
+@media only screen and (max-width: 37.5em) {
+  h2 {
+    font-size: 4.5248868778vw;
+    text-overflow: ellipsis;
+  }
+}
 
 h3 {
   font-size: 3.7707390649vw;
+}
+@media only screen and (max-width: 37.5em) {
+  h3 {
+    font-size: 4.1478129713vw;
+    text-overflow: ellipsis;
+  }
 }
 
 h4 {
   font-size: 2.2624434389vw;
 }
+@media only screen and (max-width: 37.5em) {
+  h4 {
+    font-size: 2.6395173454vw;
+    text-overflow: ellipsis;
+  }
+}
 
 h5 {
   font-size: 1.5082956259vw;
 }
+@media only screen and (max-width: 37.5em) {
+  h5 {
+    font-size: 1.8853695324vw;
+    text-overflow: ellipsis;
+  }
+}
 
 h6 {
   font-size: 1.5082956259vw;
+}
+@media only screen and (max-width: 37.5em) {
+  h6 {
+    font-size: 1.8853695324vw;
+    text-overflow: ellipsis;
+  }
 }
 
 p {
@@ -279,7 +315,7 @@ p {
 }
 @media only screen and (max-width: 37.5em) {
   p {
-    font-size: 1.2066365008vw;
+    font-size: 1.5082956259vw;
     text-overflow: ellipsis;
   }
 }
@@ -424,6 +460,10 @@ h6 {
   align-items: center;
   gap: 0;
 }
+.nav__hamburger {
+  font-size: 2.4rem;
+  color: #2e2b33;
+}
 .nav__search {
   flex: 1;
   padding: 0.6033182504vw 2.4132730015vw;
@@ -566,6 +606,11 @@ h6 {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(2, 15.0829562594vw);
   gap: 3.0165912519vw;
+}
+@media only screen and (max-width: 37.5em) {
+  .grid__2x10 {
+    grid-template-rows: repeat(2, max-content);
+  }
 }
 
 .header-about__main {

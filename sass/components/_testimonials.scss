@@ -42,6 +42,10 @@
     height: vwCalc(240, 13.26);
     aspect-ratio: 1 / 1;
     display: inline-block;
+
+    // @include repsonsive(phone) {
+    //   height: vwCalc(320, 13.26);
+    // }
   }
 
   &__img {
