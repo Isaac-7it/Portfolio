@@ -7,7 +7,7 @@ body {
 h1 {
   font-size: vwCalc(80, 13.26);
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(85, 13.26);
     text-overflow: ellipsis;
   }
@@ -17,7 +17,7 @@ h2 {
   font-size: vwCalc(55, 13.26);
   font-weight: 500;
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(60, 13.26);
     text-overflow: ellipsis;
   }
@@ -26,7 +26,7 @@ h2 {
 h3 {
   font-size: vwCalc(50, 13.26);
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(55, 13.26);
     text-overflow: ellipsis;
   }
@@ -35,7 +35,7 @@ h3 {
 h4 {
   font-size: vwCalc(30, 13.26);
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(35, 13.26);
     text-overflow: ellipsis;
   }
@@ -44,7 +44,7 @@ h4 {
 h5 {
   font-size: vwCalc(20, 13.26);
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(25, 13.26);
     text-overflow: ellipsis;
   }
@@ -53,7 +53,7 @@ h5 {
 h6 {
   font-size: vwCalc(20, 13.26);
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(25, 13.26);
     text-overflow: ellipsis;
   }
@@ -64,7 +64,7 @@ p {
   font-family: $Nunito-Sans;
   font-weight: 500;
 
-  @include repsonsive(phone) {
+  @include repsonsive(sm-desktop) {
     font-size: vwCalc(20, 13.26);
     text-overflow: ellipsis;
   }

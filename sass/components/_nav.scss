@@ -43,6 +43,14 @@
     }
   }
 
+  &__link {
+    &:is(:link, :visited) {
+      @include repsonsive(sm-desktop) {
+        font-size: vwCalc(18, 13.26) !important;
+      }
+    }
+  }
+
   &__link,
   &__indicate {
     &:is(:link, :visited) {

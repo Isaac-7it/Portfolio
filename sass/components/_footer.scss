@@ -6,6 +6,10 @@
 
   &__link {
     font-size: vwCalc(14, 13.26);
+
+    @include repsonsive(sm-desktop) {
+      font-size: vwCalc(18, 13.26);
+    }
   }
 
   &__link:is(:link, :visited),
@@ -15,6 +19,10 @@
 
   &__icon {
     font-size: vwCalc(16, 13.26);
+
+    @include repsonsive(sm-desktop) {
+      font-size: vwCalc(20, 13.26);
+    }
   }
 
   &__center,
