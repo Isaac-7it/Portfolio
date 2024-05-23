@@ -27,8 +27,9 @@
     box-shadow: 0 0 vwCalc(20, 13.26) $black-25;
 
     @include repsonsive(phone) {
-      width: max-content;
+      width: 100%;
       margin: 0 auto;
+      border: none;
     }
   }
 
@@ -40,9 +41,10 @@
   textarea {
     resize: none;
     width: 100%;
+    font-size: vwCalc(16, 13.26);
     text-align: left;
     padding: vwCalc(10, 13.26);
-    border: 1px solid $black-25;
+    border: vwCalc(1, 13.26) solid $black-25;
     border-radius: $border-radius;
     color: $black-50;
     @include inputShadow();
@@ -86,6 +88,7 @@
   }
 
   &__form-input {
+    font-size: vwCalc(18, 13.26);
     flex: 1;
     padding: vwCalc(8, 13.26) vwCalc(16, 13.26);
     border: 1px solid $black-25;

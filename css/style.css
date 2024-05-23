@@ -364,6 +364,12 @@ h6 {
   box-shadow: 2.8px 2.8px 3.6px rgba(0, 0, 0, 0.16), 7.8px 7.8px 10px rgba(0, 0, 0, 0.104), 18.7px 18.7px 24.1px rgba(0, 0, 0, 0.08), 62px 62px 80px rgba(0, 0, 0, 0.056);
   transition: all 0.25s cubic-bezier(0.79, 0.79, 0.15, 0.71);
 }
+@media only screen and (max-width: 37.5em) {
+  .btn {
+    font-size: 1.5082956259vw;
+    font-weight: 400;
+  }
+}
 .btn:hover {
   transform: translateY(-0.4rem);
   box-shadow: 1.4px 1.4px 3.6px rgba(0, 0, 0, 0.088), 4px 4px 10px rgba(0, 0, 0, 0.106), 9.6px 9.6px 24.1px rgba(0, 0, 0, 0.118), 32px 32px 80px rgba(0, 0, 0, 0.16);
@@ -489,8 +495,13 @@ h6 {
   color: rgba(45, 42, 50, 0.2509803922);
 }
 .nav__search:focus {
-  outline: 2px solid rgba(94, 23, 235, 0.75);
+  outline: 0.1508295626vw solid rgba(94, 23, 235, 0.75);
   outline-offset: 2px;
+}
+@media only screen and (max-width: 37.5em) {
+  .nav__search {
+    font-size: 1.2066365008vw;
+  }
 }
 @media only screen and (max-width: 68.75em) {
   .nav__link:is(:link, :visited) {
@@ -850,8 +861,9 @@ h6 {
 }
 @media only screen and (max-width: 37.5em) {
   .header-contact__form {
-    width: max-content;
+    width: 100%;
     margin: 0 auto;
+    border: none;
   }
 }
 .header-contact__form--heading {
@@ -861,9 +873,10 @@ h6 {
 .header-contact textarea {
   resize: none;
   width: 100%;
+  font-size: 1.2066365008vw;
   text-align: left;
   padding: 0.754147813vw;
-  border: 1px solid rgba(45, 42, 50, 0.2509803922);
+  border: 0.0754147813vw solid rgba(45, 42, 50, 0.2509803922);
   border-radius: 8px;
   color: rgba(45, 42, 50, 0.5019607843);
   box-shadow: 0 0 0.4rem rgba(94, 23, 235, 0.25);
@@ -909,6 +922,7 @@ h6 {
   border-radius: 8px;
 }
 .header-contact__form-input {
+  font-size: 1.3574660633vw;
   flex: 1;
   padding: 0.6033182504vw 1.2066365008vw;
   border: 1px solid rgba(45, 42, 50, 0.2509803922);

@@ -1,5 +1,5 @@
 @function vwCalc($px, $vw) {
-  $calc: calc(($px / $vw) * 1vw);
+  $calc: calc((($px / $vw) * 100) * 1vw);
 
   @return $calc;
 }

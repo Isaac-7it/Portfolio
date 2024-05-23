@@ -38,8 +38,12 @@
     }
 
     &:focus {
-      outline: 2px solid rgba($color-primary, 75%);
+      outline: vwCalc(2, 13.26) solid rgba($color-primary, 75%);
       outline-offset: 2px;
+    }
+
+    @include repsonsive(phone) {
+      font-size: vwCalc(16, 13.26);
     }
   }
 
